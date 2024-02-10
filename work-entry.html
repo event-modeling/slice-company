@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-item {
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: bold;
+            padding: 5px;
+        }
+        .menu-item.active {
+            text-decoration: underline;
+        }
+        .tab {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        .tab.active {
+            display: block;
+        }
+        .tab-btn {
+            margin: 10px 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        form label, form input, form select, form button {
+            margin-bottom: 10px;
+        }
+        form input, form select, form button {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="menu-item active">Work Entry</span>|
+        <span class="menu-item">Invoicing</span>|
+        <span class="menu-item">Reports</span>|
+        <span class="menu-item">Logout</span>
+    </div>
+    <h1 style="display: inline;">Work Entry</h1>
+    <div>
+        <button id="enterSliceTab" class="tab-btn">Enter Slice</button>
+        <button id="enterHoursTab" class="tab-btn">Enter Hours</button>
+    </div>
+    <div id="enterSlice" class="tab active">
+        <h2>Enter the slice you completed, you idiot!</h2>
+        <form action="add-work.html" method="post">
+            <label for="type">Type:</label>
+            <select name="type" id="type">
+                <option value="stateView">State View</option>
+                <option value="stateChange">State Change</option>
+            </select>
+            <label for="client">Client:</label>
+            <select name="client" id="client">
+                <option value="uber">Uber</option>
+                <option value="fedex">FedEx</option>
+                <option value="spotify">Spotify</option>
+            </select>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" pattern="\d{4}-\d{2}-\d{2}">
+            <input type="submit" value="Save">
+        </form>
+    </div>
+    <div id="enterHours" class="tab">
+        <!-- Content for Enter Hours will go here -->
+    </div>
+    <script>
+        document.getElementById("enterSliceTab").addEventListener("click", function() {
+            document.getElementById("enterSlice").classList.add("active");
+            document.getElementById("enterHours").classList.remove("active");
+        });
+        document.getElementById("enterHoursTab").addEventListener("click", function() {
+            document.getElementById("enterHours").classList.add("active");
+            document.getElementById("enterSlice").classList.remove("active");
+        });
+    </script>
+</body>
+</html>
+
