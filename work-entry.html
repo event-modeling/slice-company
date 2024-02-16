@@ -57,7 +57,7 @@
         <button id="enterHoursTab" class="tab-btn">Enter Hours</button>
     </div>
     <div id="enterSlice" class="tab active">
-        <h2>Enter the slice you completed, you idiot!</h2>
+        <h2>Enter the slice you completed:</h2>
         <form action="add-work.html" method="post">
             <label for="type">Type:</label>
             <select name="type" id="type">
@@ -73,11 +73,25 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date" pattern="\d{4}-\d{2}-\d{2}">
+            <input type="date" id="date" name="date" pattern="\d{4}-\d{2}-\d{2}" value="{{today}}">
             <input type="submit" value="Save">
         </form>
     </div>
     <div id="enterHours" class="tab">
+        <h2>Enter the hours you worked</h2>
+        <form action="add-hours.html" method="post">
+            <label for="project">Project:</label>
+            <select name="project" id="project">
+                <option value="development">Development</option>
+                <option value="design">Design</option>
+                <option value="testing">Testing</option>
+            </select>
+            <label for="hours">Hours:</label>
+            <input type="number" id="hours" name="hours" min="1" max="24" step="0.25">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" pattern="\d{4}-\d{2}-\d{2}" value="{{today}}">
+            <input type="submit" value="Save">
+        </form>
         <!-- Content for Enter Hours will go here -->
     </div>
     <script>
@@ -89,6 +103,23 @@
             document.getElementById("enterHours").classList.add("active");
             document.getElementById("enterSlice").classList.remove("active");
         });
+
+        // Added functionality for scrolling to adjust hours
+        document.getElementById("hours").addEventListener("wheel", function(event) {
+            event.preventDefault();
+            let currentHours = parseFloat(this.value) || 0;
+            if (event.shiftKey) {
+                // Increment in 0.25 hours if shift is held down
+                this.value = event.deltaY < 0 ? currentHours + 0.25 : currentHours - 0.25;
+            } else {
+                // Increment in 1 hour otherwise
+                this.value = event.deltaY < 0 ? currentHours + 1 : currentHours - 1;
+            }
+        });
+
+        // Set default date to today for date inputs
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById("date").value = today;
     </script>
 </body>
 </html>
