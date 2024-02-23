@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farkle Game</title>
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Farkle Game</h1>
+        </header>
+        <main>
+            <section class="player-info">
+                <div class="player-count">
+                    <label for="playerCount">Number of Players:</label>
+                    <input type="number" id="playerCount" min="1" max="6" value="2">
+                </div>
+                <button id="startGame">Start Game</button>
+            </section>
+            <section class="game-board">
+                <div class="dice-area">
+                    <h2>Dice Rolls</h2>
+                    <div class="dice-container">
+                        <!-- Dice will be dynamically inserted here -->
+                    </div>
+                    <button id="rollDice">Roll Dice</button>
+                </div>
+                <div class="picked-dice-area">
+                    <h2>Picked Dice</h2>
+                    <div class="picked-dice-container">
+                        <!-- Picked dice will be dynamically inserted here -->
+                    </div>
+                </div>
+                <div class="score-area">
+                    <h2>Score</h2>
+                    <p id="currentScore">0</p>
+                </div>
+            </section>
+            <section class="turn-controls">
+                <button id="endTurn">End Turn</button>
+                <button id="pickDice">Pick Dice</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Farkle Game</p>
+        </footer>
+    </div>
+    <script src="farkle.ts" type="module"></script>
+    <script type="module">
+        import { GameStartedEvent } from './farkle.ts';
+
+        console.log("hello")
+
+        document.getElementById('startGame').addEventListener('click', async () => {
+            const playerCount = document.getElementById('playerCount').value;
+            const gameStartedEvent = new GameStartedEvent(playerCount);
+
+            if (!('indexedDB' in window)) {
+                console.error('This browser doesn\'t support IndexedDB');
+                return;
+            }
+
+            const db = await idb.openDB('farkleGame', 1, {
+                upgrade(db) {
+                    if (!db.objectStoreNames.contains('events')) {
+                        db.createObjectStore('events', { autoIncrement: true });
+                    }
+                },
+            });
+
+            const tx = db.transaction('events', 'readwrite');
+            const store = tx.objectStore('events');
+            await store.add(gameStartedEvent);
+            await tx.complete;
+
+            console.log('Game started event added to IndexedDB');
+        });
+    </script>
+</body>
+</html>
