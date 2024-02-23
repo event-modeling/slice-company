@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farkle Game</title>
+    <style>
+        .dice {
+            display: inline-block; 
+            width: 35px; 
+            height: 35px; 
+            border: 2px solid black; 
+            text-align: center; 
+            line-height: 35px; 
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="game-container">
@@ -19,12 +30,21 @@
                 <button id="startGame">Start Game</button>
             </section>
             <section class="game-board">
+                <div class="current-player-area">
+                    <h2>Current Player</h2>
+                    <p id="currentPlayer"></p>
+                </div>
                 <div class="dice-area">
                     <h2>Dice Rolls</h2>
                     <div class="dice-container">
-                        <!-- Dice will be dynamically inserted here -->
+                        <div class="dice" id="dice1"> </div>
+                        <div class="dice" id="dice2"> </div>
+                        <div class="dice" id="dice3"> </div>
+                        <div class="dice" id="dice4"> </div>
+                        <div class="dice" id="dice5"> </div>
+                        <div class="dice" id="dice6"> </div>
                     </div>
-                    <button id="rollDice">Roll Dice</button>
+                    <button id="rollDice" disabled="true">Roll Dice</button>
                 </div>
                 <div class="picked-dice-area">
                     <h2>Picked Dice</h2>
@@ -38,44 +58,110 @@
                 </div>
             </section>
             <section class="turn-controls">
-                <button id="endTurn">End Turn</button>
+                <button id="endTurn">Bank Score</button>
                 <button id="pickDice">Pick Dice</button>
             </section>
+        <section class="event-log">
+            <h2>Event Log</h2>
+            <ul id="eventList">
+                <!-- Events will be dynamically inserted here -->
+            </ul>
+        </section>
+        <script>
+        </script>
         </main>
         <footer>
             <p>&copy; 2023 Farkle Game</p>
         </footer>
     </div>
-    <script src="farkle.ts" type="module"></script>
+    <script src="farkle.js" type="module"></script>
     <script type="module">
-        import { GameStartedEvent } from './farkle.ts';
+        import { GameStartedEvent } from './farkle.js';
 
-        console.log("hello")
+        function updateEventLog() {
+                const eventList = document.getElementById('eventList');
+                eventList.innerHTML = ''; // Clear current list
+                if (window.events && window.events.length > 0) {
+                    window.events.forEach((event, index) => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `Event ${index + 1} - ${event.constructor.name}: ${JSON.stringify(event)}`;
+                        eventList.appendChild(listItem);
+                    });
+                } else {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = 'No events yet.';
+                    eventList.appendChild(listItem);
+                }
+            }
+
+        function updateStartButton() {
+            const startButton = document.getElementById('startGame');
+            if (!window.events || window.events.length === 0 || window.events[window.events.length - 1].constructor.name === 'GameEndedEvent') {
+                startButton.disabled = false;
+            } else {
+                startButton.disabled = true;
+            }
+        }
+
+        function isInGame() {
+            return window.events && window.events.length > 0 && window.events[window.events.length - 1].constructor.name !== 'GameEndedEvent';
+        }
+
+        function updatePlayerTurn() {
+            const currentPlayerArea = document.getElementById('currentPlayer');
+            if (!isInGame()) {
+                currentPlayerArea.style.display = 'none';
+            } else {
+                currentPlayerArea.style.display = 'block';
+                const lastGameStartedEvent = window.events.filter(event => event.constructor.name === 'GameStartedEvent').pop();
+                const turnEndedEventsAfterLastGameStarted = window.events.slice(window.events.indexOf(lastGameStartedEvent) + 1).filter(event => event.constructor.name === 'TurnEndedEvent');
+                const currentPlayerTurn = (turnEndedEventsAfterLastGameStarted.length % lastGameStartedEvent.getPlayerCount()) + 1;
+                currentPlayerArea.textContent = `Current Player: Player ${currentPlayerTurn}`;
+            }
+        }
+
+        function updateDice() {
+            const rollDiceButton = document.getElementById('rollDice');
+            const diceArea = document.getElementById('diceResults');
+            if (isInGame()) {
+                rollDiceButton.disabled = false;
+            } else {
+                rollDiceButton.disabled = true;
+                diceArea.textContent = ''; // Clear dice text if not in game
+            }
+
+        }
+        
+        function NotifyOfNewEvent() 
+        {
+            updateEventLog();
+            updateStartButton();
+            updatePlayerTurn();
+            updateDice();
+        }
+        function storeEvent(event) {
+            if (!window.events) { window.events = []; } window.events.push(event);
+            NotifyOfNewEvent();
+        }
+        function rollDice(events) {
+            const lastGameStartedEvent = events.filter(event => event.constructor.name === 'GameStartedEvent').pop();
+            const turnEndedEventsAfterLastGameStarted = events.slice(events.indexOf(lastGameStartedEvent) + 1).filter(event => event.constructor.name === 'TurnEndedEvent');
+            const currentPlayerTurn = (turnEndedEventsAfterLastGameStarted.length % lastGameStartedEvent.getPlayerCount()) + 1;
+            const diceResults = [];
+            for (let i = 0; i < 6; i++) {
+                diceResults.push(Math.floor(Math.random() * 6) + 1);
+            }
+            const diceRolledEvent = new DiceRolledEvent(diceResults);
+            return diceRolledEvent;
+        }
 
         document.getElementById('startGame').addEventListener('click', async () => {
             const playerCount = document.getElementById('playerCount').value;
-            const gameStartedEvent = new GameStartedEvent(playerCount);
-
-            if (!('indexedDB' in window)) {
-                console.error('This browser doesn\'t support IndexedDB');
-                return;
-            }
-
-            const db = await idb.openDB('farkleGame', 1, {
-                upgrade(db) {
-                    if (!db.objectStoreNames.contains('events')) {
-                        db.createObjectStore('events', { autoIncrement: true });
-                    }
-                },
-            });
-
-            const tx = db.transaction('events', 'readwrite');
-            const store = tx.objectStore('events');
-            await store.add(gameStartedEvent);
-            await tx.complete;
-
-            console.log('Game started event added to IndexedDB');
+            const gameStartedEvent = new GameStartedEvent(parseInt(playerCount, 10));
+            storeEvent(gameStartedEvent);
         });
+        document.getElementById('rollDice').addEventListener('click', async () => { 
+            storeEvent(rollDice(window.events)); });
     </script>
 </body>
 </html>
