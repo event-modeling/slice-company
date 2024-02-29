@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="816c2qytRhUF1FWbcgLo" name="Page-1">
-        <mxGraphModel dx="2231" dy="1671" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="16000" pageHeight="6000" math="0" shadow="0">
+        <mxGraphModel dx="2038" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="16000" pageHeight="6000" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -336,8 +336,8 @@
                 </mxCell>
                 <mxCell id="158" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=10;fontColor=#333333;fillColor=#1ba1e2;strokeColor=#006EAF;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="6458.75" y="270" as="sourcePoint"/>
-                        <mxPoint x="8578.75" y="270" as="targetPoint"/>
+                        <mxPoint x="9130" y="270" as="sourcePoint"/>
+                        <mxPoint x="11250" y="270" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="159" value="Invoicing" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#666666;fontFamily=Helvetica;fontSize=62;fontColor=#1BA1E2;fillColor=none;align=left;fontStyle=1" vertex="1" parent="1">
@@ -396,6 +396,15 @@
                 </mxCell>
                 <mxCell id="182" value="" style="whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#666666;fontColor=#333333;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="6940" y="2440" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="184" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=10;fontColor=#333333;fillColor=#1ba1e2;strokeColor=#006EAF;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="6468.75" y="280" as="sourcePoint"/>
+                        <mxPoint x="8588.749999999998" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="185" value="Paying Subcontractors" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#666666;fontFamily=Helvetica;fontSize=62;fontColor=#1BA1E2;fillColor=none;align=left;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="9140" y="140" width="1280" height="100" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
