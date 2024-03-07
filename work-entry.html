@@ -6,7 +6,33 @@
     <title>Work Entry</title>
     <style>
         body {
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+        .menu-item {
+            color: #BB86FC;
+        }
+        .tab, form {
+            background-color: #333333;
+            color: #E0E0E0;
+        }
+        .tab-btn {
+            background-color: #BB86FC;
+            color: #121212;
+            border: none;
+        }
+        form input, form select {
+            background-color: #333333;
+            color: #E0E0E0;
+            border: 1px solid #BB86FC;
+        }
+        body {
             font-family: Arial, sans-serif;
+        }
+        form textarea {
+            background-color: #333333;
+            color: #E0E0E0;
+            border: 1px solid #BB86FC;
         }
         .menu-item {
             display: inline-block;
@@ -58,19 +84,21 @@
     </div>
     <div id="enterSlice" class="tab active">
         <h2>Enter the slice you completed:</h2>
-        <form action="add-work" method="post">
+        <form action="add-work" method="POST">
             <label for="type">Type:</label>
             <select name="type" id="type">
                 <option value="stateView">State View</option>
                 <option value="stateChange">State Change</option>
             </select>
             <label for="client">Client:</label>
+            <!-- TODO: populate this with data from the back end -->
             <select name="client" id="client">
                 <option value="uber">Uber</option>
                 <option value="fedex">FedEx</option>
                 <option value="spotify">Spotify</option>
             </select>
             <label for="projectInput">Project:</label>
+            <input type="hidden" name="submission-type" display="none" value="slice">
             <input type="text" id="projectInput" name="projectInput">
             <label for="notes">Notes:</label>
             <textarea id="notes" name="notes" rows="5" cols="50"></textarea>
@@ -94,6 +122,7 @@
                 <option value="testing">Testing</option>
             </select>
             <label for="hours">Hours:</label>
+            <input type="hidden" name="submission-type" value="hours">
             <input type="number" id="hours" name="hours" min="0.25" max="24" step="0.25">
             <div style="display: flex; align-items: center;">
                 <label for="date" style="margin-right: 10px;">Date:</label>

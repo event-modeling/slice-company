@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="816c2qytRhUF1FWbcgLo" name="Page-1">
-        <mxGraphModel dx="2038" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="16000" pageHeight="6000" math="0" shadow="0">
+        <mxGraphModel dx="2477" dy="2186" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="16000" pageHeight="6000" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,7 +8,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="SliceCompleted&lt;br&gt;&amp;nbsp;- time: 2024-02-08&lt;br&gt;&amp;nbsp;- contractor: Joe Smitth&lt;br&gt;&amp;nbsp;- client: Uber&lt;br&gt;&amp;nbsp;- project: ride_requests&lt;br&gt;&amp;nbsp;- type: State View&lt;br&gt;&amp;nbsp;- name: PotentialDriverList" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;verticalAlign=top;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="3810" y="2760" width="180" height="100" as="geometry"/>
+                    <mxGeometry x="3810" y="2760" width="180" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="84" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=12;fontColor=#000000;endArrow=classic;" parent="1" source="3" target="77" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -181,6 +181,13 @@
                 <mxCell id="83" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=12;fontColor=#000000;endArrow=classic;" parent="1" source="74" target="77" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="238" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;endArrow=classic;" edge="1" parent="1" source="74" target="237">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="6950" y="2590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="74" value="ClientAccuired&lt;br&gt;&amp;nbsp;- time: 2024-01-01&lt;br&gt;&amp;nbsp;- name: Spotify&lt;br&gt;&amp;nbsp;- invoice_prefix: SPO&lt;br&gt;&amp;nbsp;- slice_rate: $500/slice&lt;br&gt;&amp;nbsp;- hour_rate: $50/hr&lt;br&gt;&amp;nbsp;- taxable: yes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;verticalAlign=top;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="1450" y="2760" width="180" height="130" as="geometry"/>
                 </mxCell>
@@ -310,7 +317,7 @@
                 <mxCell id="150" value="Amazon - 2024-01" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=14;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;align=left;verticalAlign=top;" vertex="1" parent="1">
                     <mxGeometry x="6478.75" y="1200" width="270" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="183" value="" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;html=1;labelBackgroundColor=default;strokeColor=#B3B3B3;fontFamily=Helvetica;fontSize=62;fontColor=#1BA1E2;endArrow=classic;" edge="1" parent="1" source="151" target="182">
+                <mxCell id="183" value="" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;html=1;labelBackgroundColor=default;strokeColor=#B3B3B3;fontFamily=Helvetica;fontSize=62;fontColor=#1BA1E2;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="162" target="182">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="151" value="Generate Invoice" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#99CCFF;" vertex="1" parent="1">
@@ -344,6 +351,9 @@
                     <mxGeometry x="6458.75" y="160" width="1280" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="172" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;html=1;labelBackgroundColor=default;strokeColor=#B3B3B3;fontFamily=Helvetica;fontSize=62;fontColor=#1BA1E2;endArrow=classic;" edge="1" parent="1" source="160" target="133">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="229" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#999999;" edge="1" parent="1" source="160" target="182">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="160" value="SourceInfoForInvoicing&lt;br&gt;{&lt;br&gt;{ Uber &lt;br&gt;&amp;nbsp; &amp;nbsp;{ &lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;Joe Smith&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&lt;br style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;ride_requests&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;4&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;slices&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;10000&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;40000&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;ride_requests&amp;nbsp; 10&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;hours&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;500&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;5000&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&lt;br style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;trip_price&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;25&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;hours&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;500&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 10px;&quot;&gt;12500&lt;/span&gt;&lt;br&gt;etc&amp;nbsp; &amp;nbsp;}&lt;br&gt;&amp;nbsp; &amp;nbsp;&lt;br&gt;}&lt;br&gt;{ Amazon }&lt;br&gt;&lt;br&gt;}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;align=left;verticalAlign=top;fontColor=#000000;" vertex="1" parent="1">
@@ -394,7 +404,10 @@
                 <mxCell id="181" value="project" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;align=right;" vertex="1" parent="1">
                     <mxGeometry x="3435" y="2020" width="47.5" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="182" value="" style="whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#666666;fontColor=#333333;rounded=0;" vertex="1" parent="1">
+                <mxCell id="188" style="edgeStyle=elbowEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" edge="1" parent="1" source="182" target="186">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="182" value="Generate Invoice&lt;br&gt;" style="whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#666666;fontColor=#333333;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="6940" y="2440" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="184" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=10;fontColor=#333333;fillColor=#1ba1e2;strokeColor=#006EAF;" edge="1" parent="1">
@@ -405,6 +418,116 @@
                 </mxCell>
                 <mxCell id="185" value="Paying Subcontractors" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#666666;fontFamily=Helvetica;fontSize=62;fontColor=#1BA1E2;fillColor=none;align=left;fontStyle=1" vertex="1" parent="1">
                     <mxGeometry x="9140" y="140" width="1280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="234" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;endArrow=classic;" edge="1" parent="1" source="186" target="233">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="186" value="InvoiceGenerated&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;verticalAlign=top;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="6960" y="2770" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="208" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="1120" y="510" width="350" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="209" value="Client Management" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="550" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="210" value="Enter Client" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#FF9999;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="580" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="212" value="&lt;span style=&quot;background-color: rgb(255, 153, 153);&quot;&gt;Clients&lt;/span&gt;&amp;nbsp;| Invoicing | Reports | Logout" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;align=right;" vertex="1" parent="1">
+                    <mxGeometry x="1120" y="510" width="350" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="213" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;" vertex="1" parent="1">
+                    <mxGeometry x="1138.75" y="600" width="310" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="220" value="Set up client info" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="1150" y="600" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="227" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#CCCCCC;" edge="1" parent="1" source="221" target="226">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="221" value="Save" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;" vertex="1" parent="1">
+                    <mxGeometry x="1330" y="770" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#CCCCCC;" edge="1" parent="1" source="226" target="74">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="226" value="AccuireClient&lt;br&gt;&amp;nbsp;- time: 2024-01-01&lt;br&gt;&amp;nbsp;- name: Spotify&lt;br&gt;&amp;nbsp;- invoice_prefix: SPO&lt;br&gt;&amp;nbsp;- slice_rate: $500/slice&lt;br&gt;&amp;nbsp;- hour_rate: $50/hr&lt;br&gt;&amp;nbsp;- taxable: yes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;align=left;verticalAlign=top;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="1390" y="2460" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="241" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;endArrow=classic;" edge="1" parent="1" source="230" target="240">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="230" value="Apply Discount Codes" style="whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#666666;fontColor=#333333;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="7730" y="2440" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="236" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;endArrow=classic;exitX=0.828;exitY=1.034;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="231" target="230">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.automation;pointerEvents=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="7151.11" y="585" width="288.89" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="232" value="Invoice Enricher" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;" vertex="1" parent="1">
+                    <mxGeometry x="7100" y="900" width="450" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="235" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.52;entryY=1.029;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;endArrow=classic;" edge="1" parent="1" source="233" target="231">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="233" value="new invoices to enrich&lt;br&gt;done: n" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;align=left;verticalAlign=top;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="7400" y="2410" width="180" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="239" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.347;entryY=1.009;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;endArrow=classic;" edge="1" parent="1" source="237" target="231">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="237" value="billing info for client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;align=left;verticalAlign=top;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="7151.11" y="2415" width="180" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="340" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;endArrow=classic;" edge="1" parent="1" source="240" target="339">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="240" value="Invoice Adjusted" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;verticalAlign=top;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="7760" y="2770" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="243" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="7970" y="530" width="350" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="244" value="Invoicing" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="7990" y="570" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="245" value="Confirm Ivoice" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#FF9999;" vertex="1" parent="1">
+                    <mxGeometry x="7990" y="600" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="246" value="History" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;" vertex="1" parent="1">
+                    <mxGeometry x="8080" y="600" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="247" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Work Entry&lt;/span&gt; | &lt;span style=&quot;background-color: rgb(255, 153, 153);&quot;&gt;Invoicing&lt;/span&gt; | Reports | Logout" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;align=right;" vertex="1" parent="1">
+                    <mxGeometry x="7970" y="530" width="350" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="248" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;" vertex="1" parent="1">
+                    <mxGeometry x="7988.75" y="620" width="310" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="256" value="Uber - 2023-12" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=14;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="8008.75" y="650" width="270" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="257" value="Confirm" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#99CCFF;" vertex="1" parent="1">
+                    <mxGeometry x="8188.75" y="880" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="258" value="Joe Smith&lt;br&gt;&lt;br&gt;ride_requests&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;4&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;slices&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;10000&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;40000&lt;br&gt;ride_requests&amp;nbsp; 10&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;hours&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;500&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;5000&lt;br&gt;&lt;br&gt;trip_price&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;25&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;hours&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;500&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;12500" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#666666;fontFamily=Helvetica;fontSize=10;fontColor=#333333;fillColor=#CDEB8B;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="8017.5" y="681" width="250" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="259" value="Jim Bob&lt;br&gt;trip_price&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;100&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;hours&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;500&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;50000" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#666666;fontFamily=Helvetica;fontSize=10;fontColor=#333333;fillColor=#CDEB8B;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="8017.5" y="775" width="250" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="260" value="Subtotal&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;107500&lt;br&gt;GST&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; 5375&lt;br&gt;Total&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;112875" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#666666;fontFamily=Helvetica;fontSize=10;fontColor=#333333;fillColor=#CDEB8B;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="8138.75" y="820" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="341" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;labelBackgroundColor=default;strokeColor=#999999;fontFamily=Helvetica;fontSize=32;fontColor=#3399FF;endArrow=classic;" edge="1" parent="1" source="339">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="8110" y="1010" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="339" value="Ivvoices to confirm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;align=left;verticalAlign=top;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="7940" y="2390" width="180" height="110" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
